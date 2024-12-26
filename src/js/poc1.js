@@ -141,10 +141,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    addBtn.addEventListener("click", () => {
-        submit.reset();
-        formHeading.textContent = 'Add User';
-        document.getElementById("user-id").value = "";
-        errormsg.textContent = "";
-    });
 });

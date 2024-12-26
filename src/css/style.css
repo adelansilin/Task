@@ -1,44 +1,53 @@
-body{
+  body{
     background-color: whitesmoke;
     margin: 0;
-}
-
-  
+  }
   .parent {
     display: grid;
-    grid-template: auto 1fr auto / 200px 1fr;
+    grid-template: auto auto auto / 9rem 1fr;
   }
   
   header {
-    grid-column: 2 / 3; 
+    grid-column: 2 / 3;
+    background-color: #B3C8CF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    color: white;
+    font-family: "Archivo", serif; 
   }
   
   .sidebar {
     grid-column: 1 / 2; 
     grid-row: 1 / 4;  
-    background-color: #B3C8CF
+    background-color: #B3C8CF;
   }
   
   main {
     grid-column: 2 / 3; 
     grid-row: 2 / 3; 
+    height: calc(100vh - 5rem);
   }
-  
+
   footer {
     grid-column: 2 / 3; 
     grid-row: 3 / 4;
- 
-    background-color: #B3C8CF
-  }
-  
-header{
     background-color: #B3C8CF;
-    display: flex;
-    justify-content: space-between;
-    height: 3rem;
     color: white;
     font-family: "Archivo", serif;
-}
+    text-align: center;
+    font-size: 0.6rem;
+    height: 2rem;
+  }
+  
+  .modal-content{
+    background-color: whitesmoke;
+  }
+
+  
+  
+/* header element styles */
 h1{
     font-style: italic;
     font-size: 1.2rem;
@@ -46,67 +55,24 @@ h1{
 h2{
     font-size: 1rem; 
     margin-left: 4rem;
-}
-ul{
-    list-style: none;
-    font-size: 0.8rem;
-    display: flex;
-    gap: 30px;
-    align-items: flex-end;
+    margin: auto;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 6.2rem);
-    align-items: center;
-    justify-content: center;
+p {
+    margin-top: 0.5rem; 
 }
 
-main h2{
-    margin: 0 4rem 4rem 4rem;
-    color: #89A8B2;
-    font-size: 1.5rem;
+/* Btn styles overridden */
+.btn-primary{
+    background-color: #B3C8CF;
+    border: none;
+    transition: background-color 0.3s ease;
 }
-
-form{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:3rem;
+.btn-primary:hover{
+    background-color: #D1E1E6;
 }
-
-.form-cell{
-    display: flex;
-    justify-content: flex-start;
-
-}
-
-.form-cell label{
-    width: 150px;
-    font-family:"Roboto", serif ;
-    font-size: 0.9rem;
-    color: #888;
-}
-
-input{
-    font-family: "Roboto", serif;
-    font-size: 0.9rem;
-}
-
-.submit-btn{
-    grid-column: span 3;
-    justify-self: center;
-    font-family: "Roboto", serif;
-    padding: 0.4rem 0.9rem;
-    border-radius: 5px;
-    background-color: #E5E1DA;
-    border:  #F1F0E8;
-    color: #888; 
-    font-size: 0.9rem;
-}
-
-.submit-btn:hover{
-    transform: scale(1.1);
+.btn-primary:active {
+    background-color: #B3C8CF !important;; 
 }
 
 .error-msg{
@@ -115,55 +81,3 @@ input{
     color:  #89A8B2;
 }
 
-/* modify popup */
-.modify-content{
-    gap:2rem;
-    font-family: "Roboto", serif;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    width: 15rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #F1F0E8;
-    border-radius: 5psx;;
-    font-size: 0.9rem;
-    justify-content: center;
-    align-items: center;
-    color: #888;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.modify-content.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-#add-user-btn,#edit-user-btn{
-    all: unset;
-}
-
-#close-btn{
-    color: #89A8B2;
-    position: absolute;
-    top:0;
-    right:0;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.2rem;
-}
-#fetch-user-btn{
-    background-color: #89A8B2;
-    width: 8rem;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    padding: 0.3rem;
-}
-.dimmed  {
-    opacity: 0.5; 
-    pointer-events: none; 
-}
