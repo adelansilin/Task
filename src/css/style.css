@@ -1,3 +1,4 @@
+
   body{
     background-color: whitesmoke;
     margin: 0;
@@ -8,7 +9,7 @@
   }
   
   header {
-    grid-column: 2 / 3;
+    grid-column: 2;
     background-color: #B3C8CF;
     display: flex;
     justify-content: space-between;
@@ -19,20 +20,20 @@
   }
   
   .sidebar {
-    grid-column: 1 / 2; 
+    grid-column: 1; 
     grid-row: 1 / 4;  
     background-color: #B3C8CF;
   }
   
   main {
-    grid-column: 2 / 3; 
-    grid-row: 2 / 3; 
+    grid-column: 2 ; 
+    grid-row: 2 ; 
     height: calc(100vh - 5rem);
   }
 
   footer {
-    grid-column: 2 / 3; 
-    grid-row: 3 / 4;
+    grid-column: 2 ; 
+    grid-row: 3 ;
     background-color: #B3C8CF;
     color: white;
     font-family: "Archivo", serif;
